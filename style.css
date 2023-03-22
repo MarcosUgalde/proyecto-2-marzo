@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(58,128,180);
+background: linear-gradient(90deg, rgba(58,128,180,1) 0%, rgba(0,190,251,1) 62%, rgba(69,232,252,1) 100%);
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    height: 600px;
+}
+
+.juego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5em;
+    
+}
+
+@media screen and (max-width: 600px) {
+    .juego {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#to-do-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+#map {
+    height: 400px;
+    width: 400px;
+}
+
+.battle {
+    height: 650px;
+    width: 1000px;
+/*     background-image: url(images/callao.jpg); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.win {
+    height: 400px;
+    width: 600px;
+    background-image: url(images/celebration.jpg);
+    background-size: cover;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5em;
+}

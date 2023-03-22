@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    <title>Pokemon go!</title>
+</head>
+<body>
+    <!--Podría meter un div más como pantalla de introducción con un botón que me lleve al juego-->
+    <!--Aparte, igual sería mejor tener la to do list a la izquierda y el mapa a la derecha-->
+    <div class="intro visible">
+        <h1>Empieza tu aventura</h1>
+        <h2>Sigue los pasos, cumple tu misión y conviértete en un maestro Pokemon</h2>
+        <button id="comenzar">Comenzar</button>
+    </div>
+    <div class="juego visible">
+        <div id="to-do-list">
+            <h2>Misión</h2>
+            <ul id="lista">
+                <li class="step">En la Plaza de Callao ha aparecido un sujeto que está alterando a la población. ¡Captúralo!</li>
+            </ul>
+        </div>
+        <div id="map">
+        <script>
+            var map = L.map('map').setView([40.4167278, -3.7033387], 17);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+        </script>
+        </div>
+    </div>
+    <div class="battle hidden">
+        <h2>¡Captura al Pokemon!</h2>
+        <img src="images/charmander-img.png" class="poke-wild">
+        <div id="buttons">
+            <button id="pokeball">Pokeball</button>
+            <button id="bayas">Bayas</button>
+        </div>
+    </div>
+    <div class="win hidden">
+        <h1>¡Enhorabuena! <br> ¡Eres un maestro Pokemon!</h1>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
